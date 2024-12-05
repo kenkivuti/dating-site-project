@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Dating</title>
+
+  <!-- site favicon -->
+  <link rel="icon" type="image/png" href="../Assets/images/home/favicon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- bootstrap javascript links -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- boostrap css links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- font awesome cdn links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <!-- goggle font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kode+Mono:wght@400..700&display=swap"
+    rel="stylesheet">
+
+  <!-- swipper slider cdn links -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- All stylesheet and icons css  -->
+  <link rel="stylesheet" href="../Assets/css/style.css">
+  <link rel="stylesheet" href="../Assets/css/common.css">
+  <link rel="stylesheet" href="../Assets/css/responsive.css">
+</head>
+
+<body style="background-color: #161a2d;">
+
+  <!-- loader section start -->
+  <!-- <div class="preloader">
+    <div class="preloader-inner">
+      <span class="loader"></span>
+    </div>
+  </div> -->
+  <!-- loader section end -->
+
+  <!-- header section start -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container">
+        <a class='navbar-brand' href='index.html'>
+          <img src="../Assets/images/home/logo.png" alt="">
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class='nav-link ' href='index.html'>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class='nav-link' href='about-us.html'>About Us</a>
+            </li>
+            <li class="nav-item features_list">
+              <a class='nav-link active' href='javascript:void(0)'>Features</a>
+              <ul class="sub_menu">
+                <li><a href="all-members.html">All Members</a></li>
+                <li><a href="member-single.html">Members Profile</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <!-- <li><a href="pricing-plan.html">Pricing Plan</a></li> -->
+              </ul>
+            </li>
+           
+           
+            <li class="nav-item">
+              <a class='nav-link' href='contact.html'>Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><img src="../Assets/images/home/telephone-call.png" alt="">
+                <div>
+                  <p class="mb-0 text-white">Let's Talk!</p>
+                  <h6 class="mb-0">+91 1234567678</h6>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- header section end -->
+
+  <!-- header sider bar start -->
+  <div id="wrapper">
+    <aside id="sidebar-wrapper">
+      <div class="sidebar-brand">
+        <a href="index.html">
+          <img src="../Assets/images/home/logo-2.png" alt="">
+        </a>
+      </div>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about-us.html">About Us</a>
+        </li>
+        <li class="active">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Features
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="all-members.html">All Members</a></li>
+            <li><a href="member-single.html">Members Profile</a></li>
+            <li class="active"><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="pricing-plan.html">Pricing Plan</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </aside>
+
+    <div id="navbar-wrapper">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa-solid fa-bars-staggered"></i></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- header sider bar end -->
+
+  <!-- login section start -->
+  <section class="mt-5 pt-5 login_section mb-5">
+    <div class="container">
+      <div class="main_heading text-center mt-4 mb-5">
+        <h2 class="text-white">Login</h2>
+        <p class="mt-3">Get started today by entering just a few details</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-8 col-md-10">
+          <div class="login_box">
+            <div class="mb-4">
+              <label for="Email">Email <span>*</span></label>
+              <input type="email" class="form-control" placeholder="mail@website.com">
+            </div>
+            <div class="mb-4">
+              <label for="password">Password <span>*</span></label>
+              <input type="password" class="form-control" placeholder="Min. 8 character">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="forgot_pass">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Remember Me
+                  </label>
+                </div>
+              </div>
+              <div class="forgot_pass">
+                <a href="#">Forget Password?</a>
+              </div>
+            </div>
+            <button class="border-0 w-100 login_btn mt-4">Login Now <i class="fa-solid fa-arrow-trend-up"></i></button>
+            <div class="other">or continue</div>
+            <div class="login-other">
+              <a class="login-other-item" href="/login#">
+                <img src="../Assets/images/members/google.png" alt="">
+                <span>Sign with google</span>
+              </a>
+              <a class="login-other-item" href="/login#">
+                <img src="../Assets/images/members/facebook.png" alt="">
+                <span>Sign with facebook</span>
+              </a>
+              <a class="login-other-item" href="/login#">
+                <img src="../Assets/images/members/apple.png" alt="">
+                <span>Sign with apple</span>
+              </a>
+            </div>
+            <div class="no-account text-center">Don't have an account? <a class="tf-color" href="signup.html">Sign
+                up</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- login section end -->
+
+  <!-- whatshapp chat section start -->
+  <div class="whatshapp_img">
+    <ul class="d-flex align-items-center list-unstyled p-0 m-0">
+      <li>
+        <a href="tel:91- 123456789">+91 123456789</a>
+      </li>
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=91123456789&amp;" class="btn-whatsapp-pulse">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:info@example.com">
+          <i class="fa-solid fa-paper-plane"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- whatshapp chat section end -->
+
+
+  <!-- news latter section start -->
+  <section class="news_latter_section">
+    <div class="container news_container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-3 col-3">
+          <div class="news_latter_text d-flex gap-5 align-items-center">
+            <a href="#"><i class="fa-solid fa-envelope-open-text"></i></a>
+            <h5 class="text-white mb-0">Subscribe now to get latest updates</h5>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-9 col-9">
+          <div class="news_latter_form">
+            <form action="">
+              <div class="d-flex align-items-center">
+                <input type="email" placeholder="Enter Your Email" required="">
+                <button class="border-0 bg-transparent"><i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- news latter section end -->
+
+  <!-- footer section start -->
+  <footer class="py-5">
+    <div class="container py-4 pt-5">
+      <div class="row pt-5">
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="footer_box">
+            <img src="../Assets/images/home/logo.png" alt="">
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, est ullam! Quod dolorem
+              quibusdam odit ab inventore voluptates beatae assumenda? Laudantium eius accusantium laboriosam iusto
+              quibusdam reiciendis possimus corrupti sit.</p>
+            <ul class="d-flex p-0 m-0 list-unstyled mt-4 pt-2">
+              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><img src="../Assets/images/home/twitter.png" alt=""></a></li>
+              <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 mt-4 mt-lg-0">
+          <div class="footer_quick_links ps-xl-5">
+            <h5 class="text-white">QUICK LINKS</h5>
+            <ul class="list-unstyled p-0 mt-4">
+              <li><a href="index.html">- Home</a></li>
+              <li><a href="about-us.html">- About Us</a></li>
+              <li><a href="contact.html">- Our Team</a></li>
+              <li><a href="all-members.html">- Features</a></li>
+              <!-- <li><a href="pricing-plan.html">- Pricing Plan</a></li> -->
+              <li><a href="contact.html">- Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="col-xl-4 col-lg-3 col-md-6 mt-4 mt-lg-0">
+          <div class="footer_contact">
+            <h5 class="text-white mb-4 pb-2">CONTACT INFO</h5>
+            <div class="contact_info d-flex">
+              <div class="icon">
+                <img src="../Assets/images/home/phone-in-talk.svg" alt="">
+              </div>
+              <div class="details">
+                <p>P. <a href="tel:+1 999 999 9999">+1 999 999 9999</a> / <a href="tel:+1 000 000 0000">+1 000 000 000</a> <br><span>Mon - Fri 10:00 AM - 7:00 PM</span></p>
+              </div>
+            </div>
+
+            <div class="contact_info d-flex">
+              <div class="icon">
+                <img src="../Assets/images/home/simple-email.svg" alt="">
+              </div>
+              <div class="details">
+                <p><a href="mailto:info@example.com">info@example.com</a> <br> <a
+                    href="mailto:hr@example.com">hr@example.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact_info d-flex">
+            <div class="icon">
+              <img src="../Assets/images/home/location-on.svg" alt="">
+            </div>
+            <div class="details">
+              <p>USA Office: 64-15 Cooper Ave 64-15 Cooper Ave, Flushing, NY 11385, USA</p>
+            </div>
+          </div>
+          <div class="contact_info d-flex">
+            <div class="icon">
+              <img src="../Assets/images/home/location-on.svg" alt="">
+            </div>
+            <div class="details">
+              <p>64-15 Cooper Ave 64-15 Cooper Ave, Flushing, NY 11385, USA</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <section class="copy_bottom">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="copy_right_text">
+        <p class="text-white mb-0">Copyright © 2024 <a href="index.html">Global Dating</a> All rights reserved.</p>
+      </div>
+      <div>
+        <p class="mb-0"><a href="#">Terms &amp; Conditions</a> &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;<a href="#">
+            Privacy Policy</a></p>
+      </div>
+    </div>
+  </section>
+  <!-- footer section end -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../Assets/js/script.js"></script>
+</body>
