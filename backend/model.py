@@ -1,3 +1,4 @@
+from typing import List, Optional
 from pydantic import BaseModel
 
 
@@ -15,13 +16,14 @@ class UserLogin(BaseModel):
     password: str
 
 
+
 class UserProfileSchema(BaseModel):
     user_id: int
-    description: str | None = None
-    likes: list[str] | None = None
-    dislikes: list[str] | None = None
-    hobbies: list[str] | None = None
-    profile_picture: str | None = None
+    description: Optional[str] = None
+    likes: Optional[List[str]] = None
+    dislikes: Optional[List[str]] = None
+    hobbies: Optional[List[str]] = None
+    profile_picture: Optional[str] = None
 
 
 class config:
