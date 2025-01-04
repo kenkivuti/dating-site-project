@@ -1,5 +1,5 @@
 from typing import List
-from fastapi import FastAPI, HTTPException, Depends ,File ,UploadFile,Form,APIRouter
+from fastapi import FastAPI, HTTPException, Depends ,File ,UploadFile,Form,APIRouter,WebSocket, WebSocketDisconnect
 from sqlalchemy.orm import Session
 import uuid
 from model import *
@@ -9,6 +9,7 @@ import shutil
 from pathlib import Path
 import json
 import os
+
 
 UPLOAD_DIRECTORY = "static/images"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
@@ -162,6 +163,42 @@ async def get_my_profile(
     if not profile:
         raise HTTPException(status_code=404, detail="Profile not found for the current user")
     return profile
+
+
+
+# To track active WebSocket connections
+class ConnectionManager:
+    def __init__(self):
+        self.active_connections: list[WebSocket] = []
+
+    async def connect(self, websocket: WebSocket):
+        await websocket.accept()
+        self.active_connections.append(websocket)
+
+    def disconnect(self, websocket: WebSocket):
+        self.active_connections.remove(websocket)
+
+    async def send_message(self, message: str):
+        for connection in self.active_connections:
+            await connection.send_text(message)
+
+
+manager = ConnectionManager()
+
+@app.websocket("/ws/chat")
+async def websocket_endpoint(websocket: WebSocket):
+    await manager.connect(websocket)
+    try:
+        while True:
+            data = await websocket.receive_text()
+            await manager.send_message(data)  # Broadcast the message to all clients
+    except WebSocketDisconnect:
+        manager.disconnect(websocket)
+
+
+
+
+
 
 
 
